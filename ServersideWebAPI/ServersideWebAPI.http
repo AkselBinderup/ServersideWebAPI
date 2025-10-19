@@ -1,0 +1,35 @@
+@ServersideWebAPI_HostAddress = https://localhost:7298
+POST {{ServersideWebAPI_HostAddress}}/todoitems
+Content-Type: application/json
+
+{
+  "name":"walk dog",
+  "isComplete":true
+}
+###
+
+GET {{ServersideWebAPI_HostAddress}}/todoitems
+
+###
+
+GET {{ServersideWebAPI_HostAddress}}/todoitems/1
+
+###
+
+PUT {{ServersideWebAPI_HostAddress}}/todoitems/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "feed fish",
+  "isComplete": false
+}
+###
+
+DELETE {{ServersideWebAPI_HostAddress}}/todoitems/1
+
+###
+
+GET {{ServersideWebAPI_HostAddress}}/todoitems
+
+###
